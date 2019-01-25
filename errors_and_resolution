@@ -1,0 +1,5 @@
+******
+Err: 1. Error after delete and try to select data from table.
+ReadTimeout: Error from server: code=1200 [Coordinator node timed out waiting for replica nodes' responses] message="Operation timed out - received only 0 responses." info={'received_responses': 0, 'required_responses': 1, 'consistency': 'ONE'}
+Sol: 1. Start manuel compaction on that table.
+******
