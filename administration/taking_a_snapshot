@@ -1,0 +1,9 @@
+--https://docs.datastax.com/en/dse/5.1/dse-admin/datastax_enterprise/operations/opsBackupTakesSnapshot.html
+
+Snapshots are taken per node using the nodetool snapshot command. 
+To take a global snapshot, run the nodetool snapshot command with a parallel ssh utility, such as pssh.
+
+--Run nodetool cleanup to ensure that invalid replicas are removed.
+nodetool cleanup cycling
+--Run the nodetool snapshot command, specifying the hostname, JMX port, and keyspace. For example:
+nodetool snapshot -t cycling_2017-3-9 cycling
